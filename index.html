@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRONVAULT | Elite Fitness & Performance Club</title>
+    
+    <!-- Meta tags for Premium SEO -->
+    <meta name="description" content="Forge your strongest body at IRONVAULT. Premium luxury gym featuring elite coaching, personalized programming, advanced biometric tracking, and world-class recovery zones.">
+    <meta name="keywords" content="luxury gym, elite fitness club, personal trainers, bodybuilding, crossfit, strength training, functional fitness">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+    <!-- Ambient Dark Grid & Glowing Blob Backgrounds -->
+    <div class="ambient-glow">
+        <div class="glow-blob glow-red"></div>
+        <div class="glow-blob glow-blue"></div>
+        <div class="glow-blob glow-white"></div>
+    </div>
+    <div class="noise-overlay"></div>
+    <div class="blueprint-grid"></div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon"><i data-lucide="shield"></i></span>
+                IRON<span>VAULT</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#transformations">Transformations</a></li>
+                <li><a href="#pricing">Membership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#pricing" class="btn-premium">Join Now</a>
+            </div>
+
+            <!-- Hamburger Button (Mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Fullscreen Mobile Navigation Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#transformations">Transformations</a></li>
+            <li><a href="#pricing">Membership</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-cta">
+            <a href="#pricing" class="btn-premium">Join Now</a>
+        </div>
+    </div>
+
+    <!-- Header / Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg">
+            <!-- Cinematic Gym Background Video & Image Fallback -->
+            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1600&auto=format&fit=crop" alt="Athlete training in gym" class="hero-fallback-img">
+            <video autoplay loop muted playsinline class="hero-video-element">
+                <source src="https://player.vimeo.com/external/343135544.sd.mp4?s=d85295c20c025b682390f77918a381cfc01d51a6&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+                <source src="https://player.vimeo.com/external/435674703.sd.mp4?s=7fdfb154da220da08cf6b484cd3ecb13b7238a2e&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-container">
+            <!-- Left Side Details -->
+            <div class="hero-content">
+                <span class="badge-premium"><i data-lucide="award"></i> #1 Elite Fitness Club</span>
+                <h1>Forge Your <br><span>Strongest</span> <strong>Body.</strong></h1>
+                <p class="hero-desc">Push past your absolute limits with luxury training facilities, customized athletic coaching, and high-performance metrics designed for champions.</p>
+                <div class="hero-ctas">
+                    <a href="#pricing" class="btn-premium">Start Membership</a>
+                    <a href="#programs" class="btn-secondary">Explore Programs</a>
+                </div>
+                
+                <!-- Animated counters row -->
+                <div class="hero-stats reveal-up">
+                    <div class="stat-item">
+                        <span class="stat-num"><span class="counter-val" data-target="10" data-decimal="false">0</span>K+</span>
+                        <span class="stat-label">Elite Members</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num"><span class="counter-val" data-target="24" data-decimal="false">0</span>/7</span>
+                        <span class="stat-label">Vault Access</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num"><span class="counter-val" data-target="50" data-decimal="false">0</span>+</span>
+                        <span class="stat-label">Certified Coaches</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Interactive Glass Cards -->
+            <div class="hero-widgets">
+                <!-- Widget 1: BMI Tracker Widget -->
+                <div class="liquid-glass widget-card widget-bmi float-anim tilt-3d">
+                    <div class="tilt-3d-child">
+                        <h4><i data-lucide="calculator"></i> BioMetrics Calculator</h4>
+                        <div class="tech-spec">SYS.REF: BM_CALC // LAT.40.7128N</div>
+                        <div class="bmi-inputs">
+                            <div class="bmi-group">
+                                <label for="bmi-height">Height (cm)</label>
+                                <input type="number" id="bmi-height" placeholder="175">
+                            </div>
+                            <div class="bmi-group">
+                                <label for="bmi-weight">Weight (kg)</label>
+                                <input type="number" id="bmi-weight" placeholder="70">
+                            </div>
+                        </div>
+                        <button class="btn-bmi-calc" id="bmi-calc-btn">Measure BMI</button>
+                        <div class="bmi-result-box" id="bmi-result-box">
+                            <span>Your BMI: <span class="bmi-val" id="bmi-val">22.4</span></span>
+                            <span class="bmi-label" id="bmi-label">Normal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget 2: Calories Ring Tracker -->
+                <div class="liquid-glass widget-card widget-calories float-anim tilt-3d" style="animation-delay: -2s;">
+                    <div class="tilt-3d-child">
+                        <div class="widget-calories-header">
+                            <h4>Calories</h4>
+                            <span>Active</span>
+                        </div>
+                        <div class="tech-spec">SYS.REF: CAL_TRK // PEAK.EFF_88%</div>
+                        <div class="calories-progress-container">
+                            <div class="calories-ring">
+                                <svg>
+                                    <circle class="bg-ring" cx="32" cy="32" r="29"></circle>
+                                    <circle class="bar-ring" cx="32" cy="32" r="29"></circle>
+                                </svg>
+                            </div>
+                            <div class="calories-stat">
+                                <span class="cal-num">785</span>
+                                <span class="cal-goal">/ 1050 kcal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget 3: Live Workout Schedule -->
+                <div class="liquid-glass widget-card widget-schedule float-anim tilt-3d" style="animation-delay: -4s;">
+                    <div class="tilt-3d-child">
+                        <h4>Schedule <span>Live</span></h4>
+                        <div class="tech-spec">SYS.REF: VAULT_TIMELINE // SYNC_OK</div>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <span class="schedule-time">09:00 AM</span>
+                                <span class="schedule-name">CrossFit Elite</span>
+                                <span class="schedule-spots">Full</span>
+                            </div>
+                            <div class="schedule-item active">
+                                <span class="schedule-time">04:30 PM</span>
+                                <span class="schedule-name">Powerlifting</span>
+                                <span class="schedule-spots">3 slots</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-time">06:00 PM</span>
+                                <span class="schedule-name">HIIT Shred</span>
+                                <span class="schedule-spots">8 slots</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget 4: Membership Badge -->
+                <div class="liquid-glass widget-card widget-membership float-anim tilt-3d" style="animation-delay: -1s;">
+                    <div class="tilt-3d-child">
+                        <i data-lucide="flame"></i>
+                        <span>Level 4</span>
+                        <p>Iron Athlete</p>
+                        <div class="tech-spec">AUTH_SEC_09</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Programs Section -->
+    <section id="programs">
+        <div class="section-header reveal-up">
+            <span class="section-label"><i data-lucide="dumbbell"></i> Elite Programs</span>
+            <h2 class="section-title">Training Programs</h2>
+            <p class="section-desc">Forge your body in disciplines designed and supervised by world-class specialists. Elevate performance, master form, and achieve results.</p>
+        </div>
+        
+        <div class="programs-grid">
+            <!-- Card 1 -->
+            <div class="liquid-glass program-card reveal-up tilt-3d">
+                <div class="program-image">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" alt="Strength Training">
+                </div>
+                <div class="tilt-3d-child">
+                    <div class="blueprint-ticks"></div>
+                    <div class="program-icon-box">
+                        <i data-lucide="dumbbell"></i>
+                    </div>
+                    <div class="tech-spec">SYS.REF: STR_PRG // LOAD_CAP: 850KG</div>
+                    <h3>Strength Training</h3>
+                    <p>Build raw power, dense muscle mass, and bone density using barbell metrics and compound movements.</p>
+                    <a href="#contact" class="program-cta">Explore Class <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="liquid-glass program-card reveal-up delay-100 tilt-3d">
+                <div class="program-image">
+                    <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=800&auto=format&fit=crop" alt="Fat Loss Conditioning">
+                </div>
+                <div class="tilt-3d-child">
+                    <div class="blueprint-ticks"></div>
+                    <div class="program-icon-box">
+                        <i data-lucide="flame"></i>
+                    </div>
+                    <div class="tech-spec">SYS.REF: COND_PRG // VO2_MAX: 92%</div>
+                    <h3>Fat Loss</h3>
+                    <p>Torch body fat and keep your metabolism elevated with high-intensity metabolic conditioning.</p>
+                    <a href="#contact" class="program-cta">Explore Class <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="liquid-glass program-card reveal-up delay-200 tilt-3d">
+                <div class="program-image">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" alt="Bodybuilding">
+                </div>
+                <div class="tilt-3d-child">
+                    <div class="blueprint-ticks"></div>
+                    <div class="program-icon-box">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div class="tech-spec">SYS.REF: HYPER_PRG // SIZ_RATIO: 1.618</div>
+                    <h3>Bodybuilding</h3>
+                    <p>Maximize muscular hypertrophy, symmetry, and definition using targeted bodybuilding techniques.</p>
+                    <a href="#contact" class="program-cta">Explore Class <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="liquid-glass program-card reveal-up tilt-3d">
+                <div class="program-image">
+                    <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=800&auto=format&fit=crop" alt="Functional Fitness">
+                </div>
+                <div class="tilt-3d-child">
+                    <div class="blueprint-ticks"></div>
+                    <div class="program-icon-box">
+                        <i data-lucide="activity"></i>
+                    </div>
+                    <div class="tech-spec">SYS.REF: FUNC_PRG // STAB_COEFF: 0.98</div>
+                    <h3>Functional Fitness</h3>
+                    <p>Optimize movement patterns, flexibility, joint health, and core stability for daily peak performance.</p>
+                    <a href="#contact" class="program-cta">Explore Class <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="liquid-glass program-card reveal-up delay-100 tilt-3d">
+                <div class="program-image">
+                    <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?q=80&w=800&auto=format&fit=crop" alt="CrossFit Workout">
+                </div>
+                <div class="tilt-3d-child">
+                    <div class="blueprint-ticks"></div>
+                    <div class="program-icon-box">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <div class="tech-spec">SYS.REF: CRFT_PRG // PEAK_PWR: 1200W</div>
+                    <h3>CrossFit</h3>
+                    <p>Unleash raw athleticism with varied high-intensity workouts covering gymnastics, lifting, and cardio.</p>
+                    <a href="#contact" class="program-cta">Explore Class <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="liquid-glass program-card reveal-up delay-200 tilt-3d">
+                <div class="program-image">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop" alt="Personal Coaching">
+                </div>
+                <div class="tilt-3d-child">
+                    <div class="blueprint-ticks"></div>
+                    <div class="program-icon-box">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <div class="tech-spec">SYS.REF: COCH_PRG // METRIC_SYNC: LIVE</div>
+                    <h3>Personal Coaching</h3>
+                    <p>Receive 1-on-1 attention with tailored workout paths, biofeedback analysis, and custom diet tracking.</p>
+                    <a href="#contact" class="program-cta">Explore Class <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-grid">
+            <!-- Left Collage Panel -->
+            <div class="about-left reveal-scale">
+                <div class="collage-container">
+                    <div class="collage-img collage-img-1">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop" alt="Gym weights">
+                    </div>
+                    <div class="collage-img collage-img-2">
+                        <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=600&auto=format&fit=crop" alt="Gym racks">
+                    </div>
+                    <div class="collage-img collage-img-3">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600&auto=format&fit=crop" alt="Weight training">
+                    </div>
+                    <!-- Experience badge -->
+                    <div class="liquid-glass about-exp-badge float-anim">
+                        <h3>15+</h3>
+                        <p>Years of <br>Performance</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content Details -->
+            <div class="about-right reveal-up">
+                <span class="section-label"><i data-lucide="info"></i> About Our Vault</span>
+                <h2>We Are The Forge Of Champions</h2>
+                <p class="about-p-highlight">IRONVAULT combines elite athletic programming, state-of-the-art diagnostic equipment, and a high-performance environment.</p>
+                <p class="about-p-desc">We believe fitness is not a casual hobby—it is a pursuit of physical and mental optimization. Whether you are an elite athlete preparing for competition or looking to reclaim peak vitality, we provide the tools, support systems, and community to accelerate your transformation.</p>
+                
+                <ul class="about-list">
+                    <li class="about-list-item"><i data-lucide="check"></i> Certified Coaches</li>
+                    <li class="about-list-item"><i data-lucide="check"></i> Tailored Systems</li>
+                    <li class="about-list-item"><i data-lucide="check"></i> Nutrition Coaching</li>
+                    <li class="about-list-item"><i data-lucide="check"></i> Elite Bio-Metrics</li>
+                    <li class="about-list-item"><i data-lucide="check"></i> Recovery Zones</li>
+                    <li class="about-list-item"><i data-lucide="check"></i> 24/7 Access Pass</li>
+                </ul>
+
+                <!-- Custom Progress bars -->
+                <div class="about-progress">
+                    <div class="progress-group">
+                        <div class="progress-info">
+                            <span class="progress-label">Strength Training Focus</span>
+                            <span class="progress-val">95%</span>
+                        </div>
+                        <div class="progress-ticks-container">
+                            <div class="progress-tick-marks"></div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" data-progress="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-group">
+                        <div class="progress-info">
+                            <span class="progress-label">Fat Loss Conditioning</span>
+                            <span class="progress-val">90%</span>
+                        </div>
+                        <div class="progress-ticks-container">
+                            <div class="progress-tick-marks"></div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" data-progress="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-group">
+                        <div class="progress-info">
+                            <span class="progress-label">Functional Athletics</span>
+                            <span class="progress-val">88%</span>
+                        </div>
+                        <div class="progress-ticks-container">
+                            <div class="progress-tick-marks"></div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" data-progress="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers">
+        <div class="section-header reveal-up">
+            <span class="section-label"><i data-lucide="users"></i> Meet The Masters</span>
+            <h2 class="section-title">Elite Performance Coaches</h2>
+            <p class="section-desc">Our coaches are seasoned athletes and specialists who work closely with you to guarantee optimal mechanics, safety, and rapid development.</p>
+        </div>
+
+        <div class="trainers-grid">
+            <!-- Trainer 1 -->
+            <div class="trainer-card reveal-scale">
+                <div class="trainer-img">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=600&auto=format&fit=crop" alt="Alex Carter">
+                    <div class="biomech-hud">
+                        <div class="biomech-node node-1" style="top: 22%; left: 48%;"></div>
+                        <div class="biomech-node node-2" style="top: 48%; left: 51%;"></div>
+                        <div class="biomech-node node-3" style="top: 75%; left: 42%;"></div>
+                        <svg class="biomech-vectors">
+                            <line x1="48%" y1="22%" x2="51%" y2="48%"></line>
+                            <line x1="51%" y1="48%" x2="42%" y2="75%"></line>
+                        </svg>
+                        <span class="biomech-angle" style="top: 50%; left: 55%;">KNEE_ANGLE: 135°</span>
+                        <span class="biomech-status">BIOMECH.SCAN // SQUAT_OK</span>
+                    </div>
+                </div>
+                <div class="trainer-overlay">
+                    <div class="trainer-info">
+                        <h4>Alex Carter</h4>
+                        <p>Strength Coach</p>
+                    </div>
+                    <ul class="trainer-socials">
+                        <li><a href="#trainers" aria-label="Instagram"><i data-lucide="instagram"></i></a></li>
+                        <li><a href="#trainers" aria-label="Twitter"><i data-lucide="twitter"></i></a></li>
+                        <li><a href="#trainers" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Trainer 2 -->
+            <div class="trainer-card reveal-scale delay-100">
+                <div class="trainer-img">
+                    <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=600&auto=format&fit=crop" alt="Mia Reynolds">
+                    <div class="biomech-hud">
+                        <div class="biomech-node node-1" style="top: 25%; left: 42%;"></div>
+                        <div class="biomech-node node-2" style="top: 52%; left: 45%;"></div>
+                        <div class="biomech-node node-3" style="top: 78%; left: 60%;"></div>
+                        <svg class="biomech-vectors">
+                            <line x1="42%" y1="25%" x2="45%" y2="52%"></line>
+                            <line x1="45%" y1="52%" x2="60%" y2="78%"></line>
+                        </svg>
+                        <span class="biomech-angle" style="top: 54%; left: 49%;">HIP_ANGLE: 90°</span>
+                        <span class="biomech-status">BIOMECH.SCAN // LUNGE_OK</span>
+                    </div>
+                </div>
+                <div class="trainer-overlay">
+                    <div class="trainer-info">
+                        <h4>Mia Reynolds</h4>
+                        <p>Functional Fitness</p>
+                    </div>
+                    <ul class="trainer-socials">
+                        <li><a href="#trainers" aria-label="Instagram"><i data-lucide="instagram"></i></a></li>
+                        <li><a href="#trainers" aria-label="Twitter"><i data-lucide="twitter"></i></a></li>
+                        <li><a href="#trainers" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Trainer 3 -->
+            <div class="trainer-card reveal-scale delay-200">
+                <div class="trainer-img">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" alt="Daniel Cruz">
+                    <div class="biomech-hud">
+                        <div class="biomech-node node-1" style="top: 18%; left: 52%;"></div>
+                        <div class="biomech-node node-2" style="top: 42%; left: 50%;"></div>
+                        <div class="biomech-node node-3" style="top: 80%; left: 48%;"></div>
+                        <svg class="biomech-vectors">
+                            <line x1="52%" y1="18%" x2="50%" y2="42%"></line>
+                            <line x1="50%" y1="42%" x2="48%" y2="80%"></line>
+                        </svg>
+                        <span class="biomech-angle" style="top: 44%; left: 54%;">SPINE_ALIGN: 178°</span>
+                        <span class="biomech-status">BIOMECH.SCAN // POSTURE_OK</span>
+                    </div>
+                </div>
+                <div class="trainer-overlay">
+                    <div class="trainer-info">
+                        <h4>Daniel Cruz</h4>
+                        <p>Nutrition Expert</p>
+                    </div>
+                    <ul class="trainer-socials">
+                        <li><a href="#trainers" aria-label="Instagram"><i data-lucide="instagram"></i></a></li>
+                        <li><a href="#trainers" aria-label="Twitter"><i data-lucide="twitter"></i></a></li>
+                        <li><a href="#trainers" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Trainer 4 -->
+            <div class="trainer-card reveal-scale delay-300">
+                <div class="trainer-img">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&auto=format&fit=crop" alt="Sophie Blake">
+                    <div class="biomech-hud">
+                        <div class="biomech-node node-1" style="top: 20%; left: 46%;"></div>
+                        <div class="biomech-node node-2" style="top: 55%; left: 58%;"></div>
+                        <div class="biomech-node node-3" style="top: 82%; left: 35%;"></div>
+                        <svg class="biomech-vectors">
+                            <line x1="46%" y1="20%" x2="58%" y2="55%"></line>
+                            <line x1="58%" y1="55%" x2="35%" y2="82%"></line>
+                        </svg>
+                        <span class="biomech-angle" style="top: 58%; left: 62%;">STRIDE_ANGLE: 45°</span>
+                        <span class="biomech-status">BIOMECH.SCAN // GAIT_OK</span>
+                    </div>
+                </div>
+                <div class="trainer-overlay">
+                    <div class="trainer-info">
+                        <h4>Sophie Blake</h4>
+                        <p>HIIT Specialist</p>
+                    </div>
+                    <ul class="trainer-socials">
+                        <li><a href="#trainers" aria-label="Instagram"><i data-lucide="instagram"></i></a></li>
+                        <li><a href="#trainers" aria-label="Twitter"><i data-lucide="twitter"></i></a></li>
+                        <li><a href="#trainers" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformations Section -->
+    <section id="transformations">
+        <div class="transform-container">
+            <!-- Left metrics details panel -->
+            <div class="transform-left reveal-up">
+                <span class="section-label"><i data-lucide="trending-up"></i> Real Progress</span>
+                <h2>Before & After Results</h2>
+                <p class="transform-desc">These are real transformations accomplished by our vault members under dedicated guidance. Discipline, precision, and effort combined yield incredible outcomes.</p>
+                
+                <!-- Transformations Stats -->
+                <div class="transform-stats">
+                    <div class="transform-stat-item">
+                        <h3><span class="counter-val" data-target="97" data-decimal="false">0</span>%</h3>
+                        <p>Success Rate</p>
+                    </div>
+                    <div class="transform-stat-item">
+                        <h3><span class="counter-val" data-target="12" data-decimal="false">0</span>K+</h3>
+                        <p>Transformations</p>
+                    </div>
+                    <div class="transform-stat-item">
+                        <h3><span class="counter-val" data-target="4.9" data-decimal="true">0</span>/5</h3>
+                        <p>Member Rating</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Before/After Showcase Card -->
+            <div class="transform-right reveal-scale">
+                <div class="liquid-glass transform-card tilt-3d">
+                    <div class="tilt-3d-child">
+                        <div class="transform-images">
+                            <div class="transform-img-box">
+                                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=500&auto=format&fit=crop" alt="Before Workout Transformation">
+                                <span class="transform-label label-before">Before</span>
+                            </div>
+                            <div class="transform-img-box">
+                                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=500&auto=format&fit=crop" alt="After Workout Transformation">
+                                <span class="transform-label label-after">After</span>
+                            </div>
+                        </div>
+                        <div class="transform-info-panel">
+                            <div class="transform-member-title">
+                                <h4>Marcus Jefferson</h4>
+                                <span class="transform-metric">-32 lbs / +15 lbs Muscle</span>
+                            </div>
+                            <p class="transform-quote">"IRONVAULT changed my life. The programs are intensive but coaching kept me safe and accountable. I accomplished goals I thought were biologically impossible for me."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Pricing Section -->
+    <section id="pricing">
+        <div class="section-header reveal-up">
+            <span class="section-label"><i data-lucide="key"></i> Vault Memberships</span>
+            <h2 class="section-title">Pricing & Tier Options</h2>
+            <p class="section-desc">Select the level of access that aligns with your athletic commitment. No hidden fees. Clean, transparent scaling.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Tier 1: Basic -->
+            <div class="liquid-glass pricing-card reveal-up tilt-3d">
+                <div class="tilt-3d-child">
+                    <div class="pricing-header">
+                        <h3>Basic Pass</h3>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">49</span>
+                            <span class="period">/ month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check-circle-2"></i> 24/7 Gym Vault Access</li>
+                        <li><i data-lucide="check-circle-2"></i> Standard Lifting Racks</li>
+                        <li><i data-lucide="check-circle-2"></i> Modern Cardio Suites</li>
+                        <li><i data-lucide="check-circle-2"></i> Premium Locker Rooms</li>
+                        <li class="disabled"><i data-lucide="x-circle"></i> Custom Nutrition Guides</li>
+                        <li class="disabled"><i data-lucide="x-circle"></i> Group Workout Classes</li>
+                        <li class="disabled"><i data-lucide="x-circle"></i> Personal Coaching Plan</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary btn">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Tier 2: Pro (Standout) -->
+            <div class="liquid-glass pricing-card pricing-elite reveal-scale tilt-3d">
+                <span class="pricing-badge">Most Popular</span>
+                <div class="tilt-3d-child">
+                    <div class="pricing-header">
+                        <h3>Pro Athletics</h3>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">89</span>
+                            <span class="period">/ month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check-circle-2"></i> 24/7 Gym Vault Access</li>
+                        <li><i data-lucide="check-circle-2"></i> Unlimited Group Workouts</li>
+                        <li><i data-lucide="check-circle-2"></i> Full Sauna & Steam Zones</li>
+                        <li><i data-lucide="check-circle-2"></i> Basic Nutrition & Diet Tracking</li>
+                        <li><i data-lucide="check-circle-2"></i> 1 Guest Pass Per Month</li>
+                        <li class="disabled"><i data-lucide="x-circle"></i> Dedicated Personal Coach</li>
+                        <li class="disabled"><i data-lucide="x-circle"></i> Post-Workout Recovery Bars</li>
+                    </ul>
+                    <a href="#contact" class="btn-premium btn">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Tier 3: Elite -->
+            <div class="liquid-glass pricing-card reveal-up tilt-3d">
+                <div class="tilt-3d-child">
+                    <div class="pricing-header">
+                        <h3>Elite Titan</h3>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">149</span>
+                            <span class="period">/ month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check-circle-2"></i> 24/7 Gym Vault Access</li>
+                        <li><i data-lucide="check-circle-2"></i> Dedicated 1-on-1 Coach</li>
+                        <li><i data-lucide="check-circle-2"></i> Biofeedback Diagnostics</li>
+                        <li><i data-lucide="check-circle-2"></i> Custom Nutrition Planning</li>
+                        <li><i data-lucide="check-circle-2"></i> Infinite Recovery Zone Pass</li>
+                        <li><i data-lucide="check-circle-2"></i> Unlimited Guest Passes</li>
+                        <li><i data-lucide="check-circle-2"></i> Protein Bar Juice Privileges</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="section-header reveal-up">
+            <span class="section-label"><i data-lucide="quote"></i> Athletes Reviews</span>
+            <h2 class="section-title">Elite Member Verdict</h2>
+            <p class="section-desc">Do not take our word for it. Read the opinions of people who choose IRONVAULT every single day to maximize their physical potential.</p>
+        </div>
+
+        <div class="testimonials-container reveal-up">
+            <div class="testimonials-wrapper">
+                <!-- Slide 1 -->
+                <div class="testimonial-slide">
+                    <div class="liquid-glass testimonial-card">
+                        <div class="testimonial-rating">
+                            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                        </div>
+                        <p class="testimonial-text">"The atmospheric lighting, premium dark designs, state of the art squat racks, and recovery rooms make this place look like a spaceship. Every session feels cinematic."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?q=80&w=150&auto=format&fit=crop" alt="Sarah Jenkins">
+                            <div class="testimonial-meta">
+                                <span class="testimonial-name">Sarah Jenkins</span>
+                                <span class="testimonial-status">Pro Member Since 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="testimonial-slide">
+                    <div class="liquid-glass testimonial-card">
+                        <div class="testimonial-rating">
+                            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                        </div>
+                        <p class="testimonial-text">"Having 24/7 access to the vault means I can lift heavy at 2 AM in absolute concentration. Coaching staff are top-level and have helped me correct mechanical dysfunctions."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop" alt="Marcus Thompson">
+                            <div class="testimonial-meta">
+                                <span class="testimonial-name">Marcus Thompson</span>
+                                <span class="testimonial-status">Elite Titan Member Since 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="testimonial-slide">
+                    <div class="liquid-glass testimonial-card">
+                        <div class="testimonial-rating">
+                            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+                        </div>
+                        <p class="testimonial-text">"The recovery zone infrared saunas and cold plunges have cut down my soreness time in half. This is more than a gym; it's a bio-hacking temple."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=150&auto=format&fit=crop" alt="Elena Rostova">
+                            <div class="testimonial-meta">
+                                <span class="testimonial-name">Elena Rostova</span>
+                                <span class="testimonial-status">Pro Member Since 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Slider Controls -->
+            <div class="testimonial-ctrls">
+                <button class="btn-ctrl" id="testimonial-prev" aria-label="Previous Review"><i data-lucide="arrow-left"></i></button>
+                <div class="testimonial-dots" id="testimonial-dots"></div>
+                <button class="btn-ctrl" id="testimonial-next" aria-label="Next Review"><i data-lucide="arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-header reveal-up">
+            <span class="section-label"><i data-lucide="image"></i> Vault Aesthetics</span>
+            <h2 class="section-title">The Cinematic Gallery</h2>
+            <p class="section-desc">Sneak peek inside the dark premium atmosphere, high-end equipment suites, and real training setups.</p>
+        </div>
+
+        <div class="gallery-grid reveal-up">
+            <!-- Row 1 -->
+            <div class="gallery-item gallery-item-wide">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" alt="Dumbbells and weights">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">
+                        <h4>Dumbbell Rack</h4>
+                        <p>Free Weight Zone</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=600&auto=format&fit=crop" alt="Kettlebell">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">
+                        <h4>Kettlebell Area</h4>
+                        <p>Functional Room</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item gallery-item-tall">
+                <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=600&auto=format&fit=crop" alt="Olympic Squat Rack">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">
+                        <h4>Olympic Racks</h4>
+                        <p>Strength Arena</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop" alt="Abs Workout">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">
+                        <h4>Conditioning</h4>
+                        <p>Core Area</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item gallery-item-wide">
+                <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop" alt="Barbell squatter">
+                <div class="gallery-overlay">
+                    <div class="gallery-caption">
+                        <h4>Heavy Squat</h4>
+                        <p>Powerlifting Zone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-grid">
+            <!-- Left Info details -->
+            <div class="contact-left reveal-up">
+                <span class="section-label"><i data-lucide="map-pin"></i> Access Points</span>
+                <h2>Get In Touch</h2>
+                <p class="contact-p-desc">Have queries about our training schedules, nutrition options, or membership transfers? Reach out to our vault coordinators now.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-info-item">
+                        <span class="contact-icon"><i data-lucide="phone"></i></span>
+                        <div class="contact-text">
+                            <h5>Phone Hotline</h5>
+                            <p>+1 (800) 555-9000</p>
+                            <p>+1 (800) 555-9005</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-icon"><i data-lucide="mail"></i></span>
+                        <div class="contact-text">
+                            <h5>Secure Email</h5>
+                            <p>access@ironvault.com</p>
+                            <p>careers@ironvault.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-icon"><i data-lucide="navigation"></i></span>
+                        <div class="contact-text">
+                            <h5>Vault Address</h5>
+                            <p>789 Performance Highway, Suite 100</p>
+                            <p>Metropolis, NY 10018</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="contact-icon"><i data-lucide="clock"></i></span>
+                        <div class="contact-text">
+                            <h5>Opening Hours</h5>
+                            <p>Monday - Friday: 24 Hours Open</p>
+                            <p>Saturday - Sunday: 05:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Glass Form -->
+            <div class="liquid-glass contact-form reveal-scale">
+                <h3>Request Vault Access</h3>
+                <form id="contactForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="form-name">Full Name</label>
+                            <input type="text" id="form-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email Address</label>
+                            <input type="email" id="form-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-phone">Phone Number</label>
+                            <input type="tel" id="form-phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-goal">Primary Goal</label>
+                            <select id="form-goal">
+                                <option value="strength">Strength & Power</option>
+                                <option value="fat-loss">Fat Loss Shredding</option>
+                                <option value="hypertrophy">Muscle Hypertrophy</option>
+                                <option value="athletics">Functional Athletics</option>
+                                <option value="coaching">1-on-1 Coaching</option>
+                            </select>
+                        </div>
+                        <div class="form-group form-group-full">
+                            <label for="form-msg">Supporting Message</label>
+                            <textarea id="form-msg" placeholder="Describe your training background or targets..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-premium">Submit Request</button>
+                    <div class="form-success-msg" id="formSuccessMsg">
+                        <i data-lucide="shield-check"></i> REQUEST TRANSMITTED. We will reach out within 12 hours!
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <!-- Col 1: Brand Info -->
+            <div class="footer-col-info">
+                <a href="#home" class="logo">
+                    <span class="logo-icon"><i data-lucide="shield"></i></span>
+                    IRON<span>VAULT</span>
+                </a>
+                <p class="footer-desc">An elite athletic ecosystem tailored to provide results. We combine advanced metrics, premium facilities, and coaching expertise to forge champions.</p>
+                <ul class="footer-socials">
+                    <li><a href="#home" aria-label="Instagram"><i data-lucide="instagram"></i></a></li>
+                    <li><a href="#home" aria-label="Twitter"><i data-lucide="twitter"></i></a></li>
+                    <li><a href="#home" aria-label="Facebook"><i data-lucide="facebook"></i></a></li>
+                    <li><a href="#home" aria-label="Youtube"><i data-lucide="youtube"></i></a></li>
+                </ul>
+            </div>
+
+            <!-- Col 2: Services -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#programs">Strength Programs</a></li>
+                    <li><a href="#programs">Fat Conditioning</a></li>
+                    <li><a href="#programs">Bodybuilding</a></li>
+                    <li><a href="#about">Recovery Zone</a></li>
+                    <li><a href="#pricing">Gym Memberships</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Support -->
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#trainers">Our Coaches</a></li>
+                    <li><a href="#transformations">Member Results</a></li>
+                    <li><a href="#contact">Location Hubs</a></li>
+                    <li><a href="#contact">Support Desk</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Newsletter -->
+            <div class="footer-col-news">
+                <h4>Join the Intel</h4>
+                <p>Subscribe to receive priority notifications on class openings, biomechanics workshops, and nutritional studies.</p>
+                <form class="news-form">
+                    <input type="email" placeholder="Enter secure email..." required aria-label="Newsletter Email">
+                    <button type="submit" class="btn-news" aria-label="Subscribe"><i data-lucide="arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Legal -->
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                &copy; 2026 IRONVAULT. All rights reserved. Built for elite performers.
+            </div>
+            <div class="footer-legal">
+                <a href="#home">Privacy Protocol</a>
+                <a href="#home">Terms of Entry</a>
+                <a href="#home">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Script -->
+    <script src="script.js"></script>
+</body>
+</html>
